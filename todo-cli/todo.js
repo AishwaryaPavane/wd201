@@ -61,7 +61,7 @@ const todoList = () => {
             output.push("[x]"+" "+item.title+" "+item.dueDate);
           }
           else{
-            output.push("[]"+" "+item.title+" "+item.dueDate);
+            output.push("[ ]"+" "+item.title+" "+item.dueDate);
 
           }
         }
@@ -72,12 +72,12 @@ const todoList = () => {
             output.push("[x]"+" "+item.title);
           }
           else{
-            output.push("[]"+" "+item.title);
+            output.push("[ ]"+" "+item.title);
 
           }
         }
         if(item.dueDate===tomorrow){
-          output.push("[]"+" "+item.title+" "+item.dueDate);
+          output.push("[ ]"+" "+item.title+" "+item.dueDate);
 
         }
       })
