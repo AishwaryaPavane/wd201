@@ -5,6 +5,7 @@ const {all, markAsComplete, add, overdue, dueToday, dueLater } = todoList();
 describe("todolist test suite", () => {
     var dateToday = new Date();
     let today = dateToday.toLocaleDateString("en-CA");
+    let yesterday = new Date(new Date().setDate(dateToday.getDate() - 1)) ;
     yesterday = yesterday.toLocaleDateString("en-CA");
     let tomorrow = new Date(new Date().setDate(dateToday.getDate() + 1));
     tomorrow = tomorrow.toLocaleDateString("en-CA");
@@ -21,7 +22,7 @@ describe("todolist test suite", () => {
         markAsComplete(0);
         expect(all[0].completed).toBe(true);
 
-    var yesterday = new Date(new Date().setDate(dateToday.getDate() - 1));
+    
     });
 
     test("for checking retrieval of overdue items", () => {
