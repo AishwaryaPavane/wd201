@@ -34,7 +34,7 @@ const todoList = () => {
       return all.filter((task)=>task.dueDate > due.toLocaleDateString("en-CA"));
     };
   
-    const` toDisplayableList = (list) => {
+    const toDisplayableList = (list) => {
       // Format the To-Do list here, and return the output string
       // as per the format given above.
       return list
