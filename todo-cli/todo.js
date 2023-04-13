@@ -9,7 +9,7 @@ const todoList = () => {
   
     const overdue = () => {
         const p = new Date();
-        return all.filter((task) => task.dueDate < due.toLocalDateString("en-CA"));
+        return all.filter((task) => task.dueDate < p.toLocalDateString("en-CA"));
         
       // Write the date check condition here and return the array
       // of overdue items accordingly.
@@ -22,7 +22,7 @@ const todoList = () => {
       // Write the date check condition here and return the array
       // of todo items that are due today accordingly.
       const p = new Date();
-      return all.filter((task) => task.dueDate == due.toLocalDateString("en-CA"));
+      return all.filter((task) => task.dueDate == p.toLocalDateString("en-CA"));
       };
      
     
@@ -31,7 +31,7 @@ const todoList = () => {
       // Write the date check condition here and return the array
       // of todo items that are due later accordingly.
       const p = new Date();
-      return all.filter((task)=>task.dueDate > due.toLocaleDateString("en-CA"));
+      return all.filter((task)=>task.dueDate > p.toLocaleDateString("en-CA"));
     };
   
     const toDisplayableList = (list) => {
